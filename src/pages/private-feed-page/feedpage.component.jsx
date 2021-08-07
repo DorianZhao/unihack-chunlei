@@ -7,7 +7,7 @@ import PrivDirectory from '../../components/feed-page-comp/private-directory/pri
 const FeedPage = () => (
     <div className = 'feedpage'>
         <WebsiteTitle 
-            title = '我的资助对象'
+            title = '资助对象近况'
         />
         <PrivDirectory />
         <PrivatePanel />

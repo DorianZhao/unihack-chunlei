@@ -9,7 +9,7 @@ const FdPage = () => (
     <div className = 'FdPage'>
         <Header />
         <WebsiteTitle 
-            title = '全部受助儿童'
+            title = '可资助的儿童'
         />
         <Directory />
         <FdPanel/>
