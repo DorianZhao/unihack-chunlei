@@ -7,9 +7,15 @@
     justify-content: center;
     background-color:beige;
     margin: 0 7.5px 15px;
+    overflow: hidden;
   
     &:hover {
       cursor: pointer;
+
+      & .title{
+        transform: scale(2);
+        transition: transform 3s
+      }
     }
 
     &:first-child {

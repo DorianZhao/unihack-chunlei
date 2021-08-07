@@ -1,23 +1,38 @@
 
 .about-us {
-    min-width: 30%;
     height: 120px;
-    flex: 1 1 auto;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 20px 20px;
+    margin: 200px 200px;
+    padding: 100px;
     
-    .content {
-      height: 90px;
-      padding: 0 25px;
-      display: center;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .content-text {
+      float: left;
       font-weight: bold;
-      margin-bottom: 6px;
-      font-size: 22px;
+      font-size: 30px;
       color: #4a4a4a;
     }
+
+    .gallery{
+      width: 25vw;
+      margin: 20 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 100px;
+
+      
+      .cover {
+        margin: 50px 100px;
+        display: center;
+        opacity: 0.5;
+  
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+    }
+    
   }
