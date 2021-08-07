@@ -77,7 +77,7 @@ class SignIn extends React.Component{
                     label='password'
                     required
                 />
-                <Link to = "/">
+                <Link to = "/feed">
                     <CustomButton type='submit'> Sign in </CustomButton>
                 </Link>
                 </form>

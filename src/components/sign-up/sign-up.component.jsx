@@ -57,7 +57,7 @@ class SignUp extends React.Component{
                     label='password'
                 
                 />
-                <Link to = "/">
+                <Link to = "/feed">
                     <CustomButton type='submit'> Sign up </CustomButton>
                 </Link>
                 </form>

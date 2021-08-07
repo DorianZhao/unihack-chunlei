@@ -10,10 +10,12 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: left;
+    margin: auto auto 10pt;
 
     .option {
-      padding: 10px 15px;
+      position:absolute;
+      right:50px;
     }
   }
 }

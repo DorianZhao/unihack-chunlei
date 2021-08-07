@@ -9,7 +9,7 @@ const LoginPage = () => (
         <SignIn />
         <SignUp />
         <Link className = 'option' to = '/'>
-                Back to main
+                返回首页
         </Link>
         
     </div>
