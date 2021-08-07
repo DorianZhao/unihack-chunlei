@@ -6,6 +6,7 @@ import FdPage from './pages/fundraisers-page/fdpage.component';
 import ReportPage from './pages/facts-reports-page/reportpage.component';
 import FeedPage from './pages/private-feed-page/feedpage.component';
 import Header from './components/header/header.component';
+import LoginPage from './pages/login-page/loginpage.components';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path = '/fundraisers' component = {FdPage} />
         <Route exact path = '/reportpage' component = {ReportPage} />
         <Route exact path = '/feed' component = {FeedPage} />
+        <Route exact path = '/login' component = {LoginPage} />
       </Switch>
     </div>
     );
