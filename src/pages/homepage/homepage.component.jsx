@@ -7,10 +7,11 @@ import Header from '../../components/header/header.component';
 
 const HomePage = () => (
     <div className = 'homepage'>
-    <Header/>
-        <WebsiteTitle
-            title = 'Unihack Charity Project'
+        <Header />
+        <WebsiteTitle 
+            title = '优克拉慈善项目'
         />
+
         <Directory />
         <AboutUs />
     </div>

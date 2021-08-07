@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import HomePage from './pages/homepage/homepage.component';
 import FdPage from './pages/fundraisers-page/fdpage.component';
 import ReportPage from './pages/facts-reports-page/reportpage.component';
 import FeedPage from './pages/private-feed-page/feedpage.component';
-import Header from './components/header/header.component';
 import LoginPage from './pages/login-page/loginpage.components';
+import FundedPage from './pages/priv-funded-page/funded-page.component';
 
 import { createBrowserHistory } from 'history';
 
@@ -23,6 +23,7 @@ export default class App extends React.Component {
                   <Route exact path = '/reportpage' component = {ReportPage} />
                   <Route exact path = '/feed' component = {FeedPage} />
                   <Route exact path = '/login' component = {LoginPage} />
+                  <Route exact path = '/fundedChildren' component = {FundedPage} />
         </Switch>
     </Router>
   )
