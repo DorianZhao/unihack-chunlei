@@ -5,6 +5,7 @@ import WebsiteTitle from '../../components/website-title/website-title.component
 import Header from '../../components/header/header.component';
 import { userId } from '../../components/sign-in/sign-in.component';
 import PrivDirectory from '../../components/feed-page-comp/private-directory/priv-directory.component';
+import Reports from '../../components/facts-reports/reports.component';
 
 class ReportPage extends Component {
     constructor(props) {
@@ -29,6 +30,7 @@ class ReportPage extends Component {
               title = '项目统计'
         />
         {directory}
+        <Reports />
         </div>
       );
     }

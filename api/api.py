@@ -77,7 +77,7 @@ def get_children_info():
 def get_children_update():
     sponsor_id  = request.args.get('sponsor_id')
     print(sponsor_id)
-    cursor.execute("SELECT * FROM unihack.children_update as cu join children_info as ci on cu.children_id = ci.id where sponsor_id = %s", (sponsor_id,))
+    cursor.execute("SELECT * FROM children_update as cu join children_info as ci on cu.children_id = ci.id where sponsor_id = %s", (sponsor_id,))
     children = cursor.fetchall()
     print(children)
     return {"results":children},200

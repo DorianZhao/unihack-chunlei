@@ -30,6 +30,7 @@ class HomePage extends Component {
             title = '资助慈善平台'
         />
         {directory}
+        <AboutUs />
         </div>
       );
     }
