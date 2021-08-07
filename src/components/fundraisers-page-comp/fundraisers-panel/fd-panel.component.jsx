@@ -1,6 +1,6 @@
 import React from 'react';
 import './fd-panel.styles.scss';
-import SearchBox from '../../components/search-box/search-box.components';
+import SearchBox from '../search-box/search-box.components';
 
 const FdPanel = () => (
     <div className = 'FdPanel'>
@@ -8,6 +8,7 @@ const FdPanel = () => (
             placeholder = 'search fundraisers'
             handleChange = {null}
         />
+        
     </div>
 );
 
