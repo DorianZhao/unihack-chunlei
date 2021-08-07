@@ -1,9 +1,16 @@
 from flask import Flask, request
 import mysql.connector
+import time
+import datetime
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
 
 db = mysql.connector.connect(
     host="localhost",
-    user="root",password="123Jojo.",
+    # don't forget to change to your own user, pw, db
+    user="root",password="yourpassword", 
     database="unihack")
 cursor = db.cursor()
 
@@ -25,7 +32,7 @@ def user_login():
         result = True
     return {"results":result},200
 
-@app.route('/signup',methods=['POST'])
+@app.route('/signup',methods=['GET'])
 def create_user():
     """Create user by store username and password into database"""
     username = request.args.get('username')
@@ -73,4 +80,3 @@ def get_children_update():
     cursor.execute("SELECT * FROM children_update WHERE id = %s", (children_id,))
     children = cursor.fetchall()
     return {"results":children},200
-

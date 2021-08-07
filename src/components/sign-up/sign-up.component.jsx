@@ -18,17 +18,34 @@ class SignUp extends React.Component{
             password: '',
         };
     }
-
+    
+    signup(){
+        // helper function to insert new account information after user sign up
+        // console.log("signing up")
+        const url = 'http://127.0.0.1:5000/signup';
+        axios.get(url,{
+            params: {
+                username: this.state.username,
+                password: this.state.password
+            },
+        }).then((response) => {
+            console.log(response);
+            //history.push('/login');
+        });
+      }
 
     handleSubmit = event => {
-      event.preventDefault()
+      event.preventDefault();
+      // console.log("handle submit");
+      this.signup();
       this.setState({username: '', password: ''});
     };
 
     handleChange = event => {
         const { value, name } = event.target;
-        console.log(value)
-        console.log(name)
+        console.log("handle change");
+        //console.log(value)
+        //console.log(name)
 
         this.setState({ [name]: value });
     };
@@ -57,9 +74,9 @@ class SignUp extends React.Component{
                     label='password'
                 
                 />
-                <Link to = "/">
-                    <CustomButton type='submit'> Sign up </CustomButton>
-                </Link>
+                
+                <CustomButton type='submit'> Sign up </CustomButton>
+                
                 </form>
             </div>
         );

@@ -42,6 +42,7 @@ class SignIn extends React.Component{
 
     handleSubmit = event => {
       event.preventDefault();
+      console.log("sign in handle submit");
       this.login();
     };
 
@@ -77,9 +78,7 @@ class SignIn extends React.Component{
                     label='password'
                     required
                 />
-                <Link to = "/">
-                    <CustomButton type='submit'> Sign in </CustomButton>
-                </Link>
+                <CustomButton type='submit'> Sign in </CustomButton>
                 </form>
             </div>
         );
