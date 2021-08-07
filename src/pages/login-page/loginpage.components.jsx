@@ -8,10 +8,7 @@ const LoginPage = () => (
     <div className='login-page'>
         <SignIn />
         <SignUp />
-        <Link className = 'option' to = '/'>
-                返回首页
-        </Link>
-        
+
     </div>
 );
 

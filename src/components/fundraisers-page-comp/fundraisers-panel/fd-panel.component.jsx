@@ -5,10 +5,6 @@ import FdList from '../fundraisers-list/fd-list.component';
 
 const FdPanel = () => (
     <div className = 'FdPanel'>
-        <SearchBox
-            placeholder = 'search fundraisers'
-            handleChange = {null}
-        />
         <FdList />
     </div>
 );

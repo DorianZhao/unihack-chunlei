@@ -36,8 +36,8 @@ class SignUp extends React.Component{
     render(){
         return(
             <div className = 'sign-up'>
-                <h1> I do not have an account</h1>
-                <span>Sign in with your username and password</span>
+                <h1>  注册  </h1>
+                <span></span>
 
 
                 <form onSubmit={this.handleSubmit}>
@@ -46,19 +46,19 @@ class SignUp extends React.Component{
                     type='username'
                     handleChange={this.handleChange}
                     value={this.state.username}
-                    label='username'
-                
+                    label='用户名'
+
                 />
                 <FormInput
                     name='password'
                     type='password'
                     value={this.state.password}
                     handleChange={this.handleChange}
-                    label='password'
-                
+                    label='密码'
+
                 />
                 <Link to = "/feed">
-                    <CustomButton type='submit'> Sign up </CustomButton>
+                    <CustomButton type='submit'> 注册 </CustomButton>
                 </Link>
                 </form>
             </div>
