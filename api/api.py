@@ -27,9 +27,9 @@ def user_login():
     users = get_users(username)
     if len(users) == 0:
         return {"error":"User not found."},400
-    result = False
+    result = []
     if users[0][2] == password:
-        result = True
+        result.append(users[0][0])
     return {"results":result},200
 
 @app.route('/signup',methods=['GET'])
@@ -69,14 +69,16 @@ def donate():
 
 @app.route('/children/info',methods=['GET'])
 def get_children_info():
-    children_id  = request.args.get('children_id')
-    cursor.execute("SELECT * FROM children_info WHERE id = %s", (children_id,))
+    sponsor_id  = request.args.get('sponsor_id')
+    cursor.execute("SELECT * FROM children_info WHERE id in (SELECT DISTINCT children_id FROM unihack.funding_info where sponsor_id = %s)", (sponsor_id,))
     children = cursor.fetchall()
     return {"results":children},200
 
 @app.route('/children/update',methods=['GET'])
 def get_children_update():
-    children_id  = request.args.get('children_id')
-    cursor.execute("SELECT * FROM children_update WHERE id = %s", (children_id,))
+    sponsor_id  = request.args.get('sponsor_id')
+    print(sponsor_id)
+    cursor.execute("SELECT * FROM unihack.children_update as cu join children_info as ci on cu.children_id = ci.id where sponsor_id = %s", (sponsor_id,))
     children = cursor.fetchall()
+    print(children)
     return {"results":children},200

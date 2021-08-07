@@ -2,13 +2,12 @@ import React from 'react';
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 import axios from 'axios';
-
-import {Link} from 'react-router-dom';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { history } from "../../App";
 
 import './sign-in.styles.scss';
 
-let username;
+let userId;
 
 class SignIn extends React.Component{
     constructor(props) {
@@ -30,8 +29,9 @@ class SignIn extends React.Component{
             },
         }).then((response) => {
             console.log(response);
-            if(response['data']['result'] == true){
-              username = this.state.username;
+            if(response['data']['results'].length > 0){
+              userId = response['data']['results'][0];
+              history.push('/feed');
             } else {
                 this.setState({
                     wrong: true
@@ -57,8 +57,7 @@ class SignIn extends React.Component{
     render(){
         return(
             <div className = 'sign-in'>
-                <h1> I already have an account</h1>
-                <span>Sign in with your email and password</span>
+                <h1> 登录 </h1>
 
 
                 <form onSubmit={this.handleSubmit}>
@@ -67,7 +66,7 @@ class SignIn extends React.Component{
                     type='username'
                     handleChange={this.handleChange}
                     value={this.state.username}
-                    label='username'
+                    label='用户名'
                     required
                 />
                 <FormInput
@@ -75,14 +74,15 @@ class SignIn extends React.Component{
                     type='password'
                     value={this.state.password}
                     handleChange={this.handleChange}
-                    label='password'
+                    label='密码'
                     required
                 />
-                <CustomButton type='submit'> Sign in </CustomButton>
+                    <CustomButton type='submit'> 登录 </CustomButton>
                 </form>
             </div>
         );
     }
 }
 
-export default SignIn
+export default SignIn;
+export {userId};

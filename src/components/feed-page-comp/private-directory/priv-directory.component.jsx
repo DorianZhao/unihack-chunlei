@@ -1,10 +1,10 @@
 import React from 'react';
 
-import MenuItem from '../menu-item/menu-item.component';
+import MenuItem from '../../menu-item/menu-item.component';
 
-import './directory.styles.scss';
+import './priv-directory.styles.scss';
 
-class Directory extends React.Component {
+class PrivDirectory extends React.Component {
   constructor() {
     super();
 
@@ -25,6 +25,16 @@ class Directory extends React.Component {
           id: 3,
           linkUrl: 'reportpage'
         },
+        {
+          title: '已资助对象',
+          id: 4,
+          linkUrl: 'feed'
+        },
+        {
+          title: '资助对象近况',
+          id: 5,
+          linkUrl: 'fundedChildren'
+        },
 
       ]
     };
@@ -41,4 +51,4 @@ class Directory extends React.Component {
   }
 }
 
-export default Directory;
+export default PrivDirectory;

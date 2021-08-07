@@ -5,13 +5,13 @@ h2 {
 
 .website-title {
     min-width: 30%;
-    height: 120px;
+    height: 240px;
     flex: 1 1 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 7.5px 15px;
-    
+
     .content {
       height: 90px;
       padding: 0 25px;
@@ -19,13 +19,13 @@ h2 {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-  
+
       .title {
         font-weight: bold;
         margin-bottom: 6px;
         font-size: 72px;
-        color: #0ccac4;
+        color: #1E90FF;
       }
-  
+
     }
   }
