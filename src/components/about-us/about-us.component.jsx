@@ -1,5 +1,6 @@
 import React from 'react' ; 
 import './about-us.styles.scss';
+import Background from './charity.jpg';
 
 const AboutUs = () => (
     <div className= 'about-us'>

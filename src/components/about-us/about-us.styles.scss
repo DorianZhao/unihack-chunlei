@@ -5,34 +5,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 200px 200px;
+    margin: 100px auto;
     padding: 100px;
     
     .content-text {
+      opacity: 0.7;
       float: left;
-      font-weight: bold;
       font-size: 30px;
-      color: #4a4a4a;
-    }
+      color: #000000;
 
-    .gallery{
-      width: 25vw;
-      margin: 20 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 100px;
-
-      
-      .cover {
-        margin: 50px 100px;
-        display: center;
-        opacity: 0.5;
-  
-        &:hover {
-          opacity: 1;
-        }
+      &:hover {
+        opacity: 1;
+        transform: scale(1.2);
+        transition: transform 4s
       }
 
     }
+
     
   }
