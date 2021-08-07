@@ -26,3 +26,9 @@ Imported react-router-dom and created fundraisers and report pages. To navigate 
 
 `localhost:3000/fundraisers`
 `localhost:3000/reportpage`
+
+# [commit ef0c306] Add private feed page
+
+added private feed page. To navigate, change the url to:
+
+`localhost:3000/feed`
