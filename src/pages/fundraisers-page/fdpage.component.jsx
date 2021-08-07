@@ -6,8 +6,8 @@ import FdPanel from '../../components/fundraisers-page-comp/fundraisers-panel/fd
 
 const FdPage = () => (
     <div className = 'FdPage'>
-        <WebsiteTitle 
-            title = 'All Fundraisers'
+        <WebsiteTitle
+        title = 'children'
         />
         <Directory />
         <FdPanel/>

@@ -2,12 +2,12 @@ import React from 'react';
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { history } from "../../App";
-import { withRouter } from 'react-router-dom';
 
 import './sign-in.styles.scss';
 
-let username;
+let userId;
 
 class SignIn extends React.Component{
     constructor(props) {
@@ -29,8 +29,8 @@ class SignIn extends React.Component{
             },
         }).then((response) => {
             console.log(response);
-            if(response['data']['result'] == true){
-              username = this.state.username;
+            if(response['data']['results'].length > 0){
+              userId = response['data']['results'][0];
               history.push('/feed');
             } else {
                 this.setState({
@@ -77,11 +77,12 @@ class SignIn extends React.Component{
                     label='password'
                     required
                 />
-                <CustomButton type='submit'> Sign in </CustomButton>
+                    <CustomButton type='submit'> Sign in </CustomButton>
                 </form>
             </div>
         );
     }
 }
 
-export default SignIn
+export default SignIn;
+export {userId};
