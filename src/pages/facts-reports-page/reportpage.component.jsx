@@ -1,17 +1,15 @@
 import React from 'react';
-import './homepage.styles.scss';
+import './reportpage.styles.scss';
 import Directory from '../../components/directory/directory.component'
 import WebsiteTitle from '../../components/website-title/website-title.component';
-import AboutUs from '../../components/about-us/about-us.component';
 
-const HomePage = () => (
-    <div className = 'homepage'>
+const ReportPage = () => (
+    <div className = 'ReportPage'>
         <WebsiteTitle 
-            title = 'Unihack Charity Project'
+            title = 'Our statistics'
         />
         <Directory />
-        <AboutUs />
     </div>
 );
 
-export default HomePage;
+export default ReportPage;
