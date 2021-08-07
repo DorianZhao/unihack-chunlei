@@ -2,6 +2,7 @@ import React from 'react';
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
 import './sign-in.styles.scss';
@@ -40,6 +41,7 @@ class SignIn extends React.Component{
 
     handleSubmit = event => {
       event.preventDefault()
+      this.setState({logged: true})
       this.login();
     };
 
@@ -75,7 +77,9 @@ class SignIn extends React.Component{
                     label='password'
                     required
                 />
-                <CustomButton type='submit'> Sign in </CustomButton>
+                <Link to = "/">
+                    <CustomButton type='submit'> Sign in </CustomButton>
+                </Link>
                 </form>
             </div>
         );

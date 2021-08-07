@@ -1,6 +1,7 @@
 import React from 'react';
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
@@ -56,7 +57,9 @@ class SignUp extends React.Component{
                     label='password'
                 
                 />
-                <CustomButton type='submit'> Sign up </CustomButton>
+                <Link to = "/">
+                    <CustomButton type='submit'> Sign up </CustomButton>
+                </Link>
                 </form>
             </div>
         );
