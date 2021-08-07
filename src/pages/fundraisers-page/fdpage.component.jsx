@@ -31,6 +31,7 @@ class FdPage extends Component {
               title = '可资助的儿童'
         />
         {directory}
+        <FdPanel />
         </div>
       );
     }
