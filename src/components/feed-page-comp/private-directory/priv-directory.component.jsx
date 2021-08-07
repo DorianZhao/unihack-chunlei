@@ -30,6 +30,11 @@ class PrivDirectory extends React.Component {
           id: 4,
           linkUrl: 'fundedChildren'
         },
+        {
+          title: '资助对象近况',
+          id: 5,
+          linkUrl: 'feed'
+        },
 
       ]
     };
