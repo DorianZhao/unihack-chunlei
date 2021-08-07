@@ -1,17 +1,30 @@
 
+h3 {
+    font-size: 28px;
+    color: black;
+    font-weight: 400;
+    margin: 40px 50px 20px;
+}
+.center {
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 
+}
 .about-us {
     min-width: 30%;
-    height: 120px;
+    height: 220px;
     flex: 1 1 auto;
-    display: flex;
+    display:  flex;
     align-items: center;
     justify-content: center;
     border: 1px solid black;
     margin: 0 7.5px 15px;
     
     .content {
-      height: 90px;
+      height: 220px;
       padding: 0 25px;
       display: flex;
       flex-direction: column;
@@ -20,10 +33,10 @@
       border: 1px solid black;
   
       .text {
-        font-weight: bold;
+        font-weight: 200;
         margin-bottom: 6px;
-        font-size: 22px;
-        color: #4a4a4a;
+        font-size: 20px;
+        color: black;
       }
   
     }
