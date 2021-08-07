@@ -19,3 +19,10 @@ Initialized a dummy homepage with a website title and a directory containing all
 Note: I used sass for styling, so make sure to run the following command before yarn start. (sass is not necessary, css is totally fine for our project) 
 
 run `yarn add node-sass@4.14.1`
+
+# [commit 2697b4a] Initialized fundraisers page and facts-and-reports page
+
+Imported react-router-dom and created fundraisers and report pages. To navigate to the pages, change the url to:
+
+`localhost:3000/fundraisers`
+`localhost:3000/reportpage`
