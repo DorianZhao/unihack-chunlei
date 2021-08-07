@@ -1,4 +1,5 @@
 import React from 'react' ; 
+import './website-title.styles.scss';
 
 const WebsiteTitle = ({title}) => (
     <div className = 'website-title'>

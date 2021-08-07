@@ -1,4 +1,5 @@
 import React from 'react' ; 
+import './about-us.styles.scss';
 
 const AboutUs = () => (
     <div className = 'content'>
