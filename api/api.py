@@ -1,11 +1,5 @@
 from flask import Flask, request
 import mysql.connector
-import time
-import datetime
-from flask_cors import CORS
-
-app = Flask(__name__)
-CORS(app)
 
 db = mysql.connector.connect(
     host="localhost",
@@ -79,3 +73,4 @@ def get_children_update():
     cursor.execute("SELECT * FROM children_update WHERE id = %s", (children_id,))
     children = cursor.fetchall()
     return {"results":children},200
+

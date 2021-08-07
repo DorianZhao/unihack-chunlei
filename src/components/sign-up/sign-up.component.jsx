@@ -1,48 +1,28 @@
 import React from 'react';
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
-import axios from 'axios';
-
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
-import './sign-in.styles.scss';
+import './sign-up.styles.scss';
 
 let username;
 
-class SignIn extends React.Component{
+class SignUp extends React.Component{
     constructor(props) {
         super(props);
 
         this.state = {
             username: '',
             password: '',
-            wrong: false
         };
     }
 
-    login(){
-        const url = 'http://127.0.0.1:5000/login';
-        axios.get(url,{
-            params: {
-                username: this.state.username,
-                password: this.state.password
-            },
-        }).then((response) => {
-            console.log(response);
-            if(response['data']['result'] == true){
-              username = this.state.username;
-            } else {
-                this.setState({
-                    wrong: true
-                })
-            }
-        });
-    };
 
     handleSubmit = event => {
-      event.preventDefault();
-      this.login();
+      event.preventDefault()
+      this.setState({username: '', password: ''});
     };
 
     handleChange = event => {
@@ -55,9 +35,9 @@ class SignIn extends React.Component{
 
     render(){
         return(
-            <div className = 'sign-in'>
-                <h1> I already have an account</h1>
-                <span>Sign in with your email and password</span>
+            <div className = 'sign-up'>
+                <h1> I do not have an account</h1>
+                <span>Sign in with your username and password</span>
 
 
                 <form onSubmit={this.handleSubmit}>
@@ -67,7 +47,7 @@ class SignIn extends React.Component{
                     handleChange={this.handleChange}
                     value={this.state.username}
                     label='username'
-                    required
+                
                 />
                 <FormInput
                     name='password'
@@ -75,10 +55,10 @@ class SignIn extends React.Component{
                     value={this.state.password}
                     handleChange={this.handleChange}
                     label='password'
-                    required
+                
                 />
                 <Link to = "/">
-                    <CustomButton type='submit'> Sign in </CustomButton>
+                    <CustomButton type='submit'> Sign up </CustomButton>
                 </Link>
                 </form>
             </div>
@@ -86,4 +66,4 @@ class SignIn extends React.Component{
     }
 }
 
-export default SignIn
+export default SignUp
