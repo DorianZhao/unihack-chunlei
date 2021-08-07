@@ -2,6 +2,7 @@ import React from 'react';
 import './fdpage.styles.scss';
 import Directory from '../../components/directory/directory.component'
 import WebsiteTitle from '../../components/website-title/website-title.component';
+import FdPanel from '../../components/fundraisers-panel/fd-panel.component';
 
 const FdPage = () => (
     <div className = 'FdPage'>
@@ -9,6 +10,7 @@ const FdPage = () => (
             title = 'All Fundraisers'
         />
         <Directory />
+        <FdPanel/>
     </div>
 );
 
