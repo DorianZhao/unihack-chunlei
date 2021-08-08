@@ -31,7 +31,7 @@ def user_login():
         result.append(users[0][0])
     return {"results":result},200
 
-@app.route('/signup',methods=['POST'])
+@app.route('/signup',methods=['GET'])
 def create_user():
     """Create user by store username and password into database"""
     username = request.args.get('username')

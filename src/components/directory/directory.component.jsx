@@ -16,7 +16,7 @@ class Directory extends React.Component {
           linkUrl: ''
         },
         {
-          title: '可资助的儿童',
+          title: '可资助对象',
           id: 2,
           linkUrl: 'fundraisers'
         },

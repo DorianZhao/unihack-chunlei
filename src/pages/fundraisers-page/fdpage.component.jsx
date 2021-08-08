@@ -28,7 +28,7 @@ class FdPage extends Component {
         <div className='FdPage'>
         {header}
         <WebsiteTitle
-              title = '可资助的儿童'
+              title = '可资助对象'
         />
         {directory}
         <FdPanel />

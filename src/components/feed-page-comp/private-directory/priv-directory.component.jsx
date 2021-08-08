@@ -16,7 +16,7 @@ class PrivDirectory extends React.Component {
           linkUrl: ''
         },
         {
-          title: '可资助的儿童',
+          title: '可资助对象',
           id: 2,
           linkUrl: 'fundraisers'
         },
@@ -26,7 +26,7 @@ class PrivDirectory extends React.Component {
           linkUrl: 'reportpage'
         },
         {
-          title: '已资助对象',
+          title: '我的资助对象',
           id: 4,
           linkUrl: 'feed'
         },

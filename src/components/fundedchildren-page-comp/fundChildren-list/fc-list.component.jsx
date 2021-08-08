@@ -60,7 +60,7 @@ class FcList extends React.Component{
                 return (
                 <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#000000' }}
                 contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                 date={post[3]}
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}

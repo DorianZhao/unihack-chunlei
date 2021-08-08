@@ -19,16 +19,33 @@ class SignUp extends React.Component{
         };
     }
 
+    signup(){
+        // helper function to insert new account information after user sign up
+        // console.log("signing up")
+        const url = 'http://127.0.0.1:5000/signup';
+        axios.get(url,{
+            params: {
+                username: this.state.username,
+                password: this.state.password
+            },
+        }).then((response) => {
+            console.log(response);
+            //history.push('/login');
+        });
+      }
 
     handleSubmit = event => {
-      event.preventDefault()
+      event.preventDefault();
+      // console.log("handle submit");
+      this.signup();
       this.setState({username: '', password: ''});
     };
 
     handleChange = event => {
         const { value, name } = event.target;
-        console.log(value)
-        console.log(name)
+        console.log("handle change");
+        //console.log(value)
+        //console.log(name)
 
         this.setState({ [name]: value });
     };
@@ -36,9 +53,7 @@ class SignUp extends React.Component{
     render(){
         return(
             <div className = 'sign-up'>
-                <h1>  注册  </h1>
-                <span></span>
-
+                <h1> 注册</h1>
 
                 <form onSubmit={this.handleSubmit}>
                 <FormInput
@@ -57,9 +72,9 @@ class SignUp extends React.Component{
                     label='密码'
 
                 />
-                <Link to = "/feed">
-                    <CustomButton type='submit'> 注册 </CustomButton>
-                </Link>
+
+                <CustomButton type='submit'> 注册 </CustomButton>
+
                 </form>
             </div>
         );

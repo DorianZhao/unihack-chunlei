@@ -27,7 +27,7 @@ class HomePage extends Component {
         <div className='homepage'>
         {header}
         <WebsiteTitle
-            title = '资助慈善平台'
+            title = 'Pegasus慈善平台'
         />
         {directory}
         <AboutUs />
