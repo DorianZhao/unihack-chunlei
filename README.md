@@ -2,11 +2,11 @@
 
 ## 1: Install packages
 
-run `npm install`
+run `yarn install`
 
 ## 2: Run project
 
-run `npm start`
+run `yarn start-api`
 
 ## 3: Open it
 
