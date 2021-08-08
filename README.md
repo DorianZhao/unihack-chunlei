@@ -32,3 +32,8 @@ Imported react-router-dom and created fundraisers and report pages. To navigate 
 added private feed page. To navigate, change the url to:
 
 `localhost:3000/feed`
+
+# [commit 10814d6] Add login page with sign-in button
+
+added login page with sign-in form. To navigate, click login or change the url to
+`localhost:3000/login`

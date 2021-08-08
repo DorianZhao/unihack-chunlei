@@ -5,3 +5,32 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
   }
+
+  .carousel-container {
+    position: absolute;
+    left: 10%;
+    width: 50%;
+    padding-left: 1000px;
+      padding-top: 50px;
+}
+
+.card {
+    width: 90%;
+    border: 3px;
+    border-style: dotted;
+    border-color: lightsteelblue;
+    background-color: lightsteelblue;
+}
+
+.card-body {
+  padding: 0px 0px 0px 20px;
+  background-color: lightblue;
+}
+
+.card-name {
+  padding-top: 10px;
+}
+
+.card-introduction {
+  padding-bottom: 10px;
+}

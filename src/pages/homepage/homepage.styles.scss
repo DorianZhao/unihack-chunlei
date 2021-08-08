@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 .homepage {
     background-image: url(backgrd.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 900px;
     width: 1480px;   
+=======
+.homepage{
+  margin:auto;
+  width: auto;
+  height:2000px;
+  flex-direction: column;
+  background-color: rgba(248, 237, 250, 0.667);
+  align-items: center;
+>>>>>>> 0a38acee97dece569a97c76405b1b5ff5e145d6c
 }

@@ -11,17 +11,17 @@ class Directory extends React.Component {
     this.state = {
       sections: [
         {
-          title: 'ABOUT US',
+          title: '关于我们',
           id: 1,
           linkUrl: ''
         },
         {
-          title: 'ALL FUNDRAISERS',
+          title: '可资助对象',
           id: 2,
           linkUrl: 'fundraisers'
         },
         {
-          title: 'FACTS AND REPORTS',
+          title: '项目统计',
           id: 3,
           linkUrl: 'reportpage'
         },
