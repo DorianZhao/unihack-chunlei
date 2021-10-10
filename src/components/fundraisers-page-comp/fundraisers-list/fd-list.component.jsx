@@ -94,15 +94,6 @@ class ChildrenList extends React.Component{
         </div>
         );
     }
-    /*
-    render(){
-        return(
-            <View>
-                {this.renderChildren()}
-            </View>
-        );
-    }
-    */
 }
 
 export default ChildrenList
